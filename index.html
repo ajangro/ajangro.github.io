@@ -1,39 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alex Jangro | Resume</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Jangro - Mechanical Engineering Portfolio</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #ecf0f1;
+        }
+        .contact-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 4rem;
+        }
+        h2 {
+            border-bottom: 3px solid var(--secondary);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #ddd; /* Placeholder background */
+        }
+        .card-content {
+            padding: 1.5rem;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        .tags {
+            margin-top: 1rem;
+        }
+        .tag {
+            background-color: #eee;
+            color: #555;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            display: inline-block;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary);
+            color: white;
+        }
+    </style>
 </head>
 <body>
-  <main class="resume">
+
     <header>
-      <h1>Alex Jangro</h1>
-      <p>Mechanical Engineering Student | CU Boulder</p>
-      <p>Email: alex@jangro.com | GitHub: github.com/ajangro</p>
+        <h1>Alex Jangro [cite: 1]</h1>
+        <p>Mechanical Engineering Student at CU Boulder [cite: 2]</p>
+        <div class="contact-links">
+            <a href="mailto:alex@jangro.com">alex@jangro.com [cite: 84]</a> | 
+            <a href="https://linkedin.com/in/ajangro/" target="_blank">LinkedIn [cite: 84]</a>
+        </div>
     </header>
 
-    <section>
-      <h2>Education</h2>
-      <p>CU Boulder — B.S. Mechanical Engineering — 2028</p>
-    </section>
+    <div class="container">
+        
+        <section>
+            <h2>Engineering Experience</h2>
+            <div class="card">
+                <div class="card-content">
+                    <h3>CU Hyperloop - Tunnel Support Lead [cite: 98, 104]</h3>
+                    <p>Leading the tunnel support sub-team through the design, testing, and fabrication of a new HVAC duct-based tunnel support system[cite: 12]. Previously contributed heavily to the design of a brand-new cylindrical axis 3D printer, designing the z, r, and segment ejection systems in SolidWorks[cite: 16, 17].</p>
+                    <div class="tags">
+                        <span class="tag">SolidWorks [cite: 17]</span>
+                        <span class="tag">Manufacturing [cite: 22]</span>
+                        <span class="tag">Leadership [cite: 22]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Robotic Arm:</strong> Custom spherical control system using Teensy</li>
-        <li><strong>Interactive Energy Dispaly:</strong> Arduino controlled interactive display to educate users about energy use</li>
-        <li><strong>Cylindrical 3D Printer:</strong> Dual-nozzle print head with liquid-cooled shell</li>
-      </ul>
-    </section>
+        <section>
+            <h2>Personal Projects</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <img src="car.jpg" alt="Autonomous Car">
+                    <div class="card-content">
+                        <h3>Autonomous Collision-Avoidance Car [cite: 27]</h3>
+                        <p>Fully 3D-printed autonomous car driven by an ESP32[cite: 29, 37]. Leaned into autonomous driving by using ultrasonic sensors and programmed C++ real-time avoidance logic[cite: 35, 122].</p>
+                    </div>
+                </div>
 
-    <section>
-      <h2>Skills</h2>
-      <p>SolidWorks, MATLAB, Python, C++, Raspberry Pi, 3D Printing</p>
-    </section>
+                <div class="card">
+                    <img src="arm.jpg" alt="Robotic Arm">
+                    <div class="card-content">
+                        <h3>Servo Robotic Arm [cite: 53]</h3>
+                        <p>Designed, 3D-printed, and fully wired a functional, multi-axis robotic arm controlled by a Teensy 4.0[cite: 54, 55]. Programmed a joystick interface translating inputs into a spherical coordinate system[cite: 56].</p>
+                    </div>
+                </div>
 
-    <button onclick="window.print()">Print / Save as PDF</button>
-  </main>
+                <div class="card">
+                    <img src="motor.jpg" alt="BLDC Motor">
+                    <div class="card-content">
+                        <h3>Homemade BLDC Motor [cite: 59]</h3>
+                        <p>Designed, 3D-printed, and assembled a fully functional brushless DC motor[cite: 62]. Features six hand-wound copper coils, successfully pulling ~2.5A at 8.5V during load testing[cite: 63, 66].</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Team Projects</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <img src="energy.jpg" alt="Energy Display">
+                    <div class="card-content">
+                        <h3>Interactive Energy Display [cite: 68]</h3>
+                        <p>Led a 5-member team to develop an electromechanical educational display, winning the CU Engineering Expo Sustainability Award[cite: 69]. Developed all Arduino control firmware[cite: 71].</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="wocka.jpg" alt="Wocka Billboard">
+                    <div class="card-content">
+                        <h3>WOCKA² Engineering Billboard [cite: 72]</h3>
+                        <p>Arduino-powered interactive billboard to gamify education[cite: 79]. Programmed a playable matrix-based mini-game using addressable LED strips and C++[cite: 80].</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Built by Alex Jangro [cite: 1] | CU Boulder [cite: 2]</p>
+    </footer>
+
 </body>
 </html>
